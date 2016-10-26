@@ -1,0 +1,61 @@
+
+
+.btn-quart {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px 0 0 0;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-quart:hover {
+  opacity: 1;
+  background: #3ac162;
+}
+
+.btn-rotate-0 {
+  position: absolute;
+}
+
+.btn-rotate-90 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform:rotate(90deg);
+}
+
+.btn-rotate-180 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  transform:rotate(180deg);
+}
+
+.btn-rotate-270 {
+  position: absolute;
+  bottom: 0px;
+  transform:rotate(270deg);
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+}
+
+.right {
+  position: absolute;
+  top: 100px;
+  right: 25px;
+}
+
+.background-relative {
+  height: 500px;
+  width: 500px;
+  position: relative;
+}

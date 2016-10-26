@@ -1,0 +1,49 @@
+
+<div class="wrapper-grey">
+
+    <div class="container">
+      <div class="row">
+        <h1>Identification du nouveau patient</h1>
+      </div>
+      <%= simple_form_for @patient do |f| %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :first_name, label: "Nom de famille" %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :last_name %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :maiden_name %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :birth_date %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :phone1 %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :phone2 %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :address %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :city %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :zip_code %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :health_insurance %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.input :social_security_number %></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div><%= f.button :submit %></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

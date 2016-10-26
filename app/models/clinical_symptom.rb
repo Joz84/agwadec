@@ -1,0 +1,2 @@
+class ClinicalSymptom < ApplicationRecord
+end

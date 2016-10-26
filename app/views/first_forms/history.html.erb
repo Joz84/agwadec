@@ -1,0 +1,14 @@
+
+ <%= simple_form_for @first_form, url: reading_first_forms_path(@reading) do |f| %>
+    <li><%= f.input :mammography_type %></li>
+    <li><%= f.input :mammography_system %></li>
+    <li><%= f.input :past_mammography %></li>
+    <li><%= f.input :past_mammography_date %></li>
+    <li><%= f.input :past_operation %></li>
+    <li><%= f.input :past_operation_date %></li>
+    <li><%= f.input :past_operation_reason %></li>
+    <li><%= f.input :family_history %></li>
+    <li><%= f.input :family_member %></li>
+    <li><%= f.input :hormonal_treatment %></li>
+    <li><%= f.button :submit %></li>
+  <% end %>

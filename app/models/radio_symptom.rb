@@ -1,0 +1,2 @@
+class RadioSymptom < ApplicationRecord
+end

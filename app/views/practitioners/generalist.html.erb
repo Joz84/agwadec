@@ -1,0 +1,10 @@
+
+ <%= simple_form_for @practitioner, url: patient_practitioners_path(@patient) do |f| %>
+    <li><%= f.input :name %></li>
+    <li><%= f.input :speciality, input_html: { value: "generalist" }, as: :hidden %></li>
+    <li><%= f.input :address %></li>
+    <li><%= f.input :city %></li>
+    <li><%= f.input :zip_code %></li>
+    <li><%= f.button :submit %></li>
+  <% end %>
+
