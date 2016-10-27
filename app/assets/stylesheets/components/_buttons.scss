@@ -1,15 +1,16 @@
 
 
 .btn-quart {
-  height: 100px;
-  width: 100px;
-  border-radius: 100px 0 0 0;
-  background: #6AD58B;
+  height: 50px;
+  width: 50px;
+  opacity: 0.5;
+  border-radius: 50px 0 0 0;
+  background: #66A1C8;
   transition: background 0.3s ease;
 }
 .btn-quart:hover {
   opacity: 1;
-  background: #3ac162;
+  background: #667C8B;
 }
 
 .btn-rotate-0 {
@@ -37,25 +38,27 @@
 }
 
 .circle {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: relative;
 }
 
 .left {
   position: absolute;
-  top: 100px;
-  left: 25px;
+  top: 170px;
+  left: 114px;
 }
 
 .right {
   position: absolute;
-  top: 100px;
-  right: 25px;
+  top: 170px;
+  right: 133px;
 }
 
 .background-relative {
-  height: 500px;
+  height: 349px;
   width: 500px;
+  position: relative;
+  background-size: cover !important;
   position: relative;
 }

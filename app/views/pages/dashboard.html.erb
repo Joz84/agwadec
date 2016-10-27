@@ -1,0 +1,11 @@
+<div class="wrapper-grey">
+  <div class="container">
+    <div class="row">
+      <% @patients.each do |patient| %>
+          <div class="col-xs-10 col-sm-3">
+            <div><%= patient.first_name %></div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

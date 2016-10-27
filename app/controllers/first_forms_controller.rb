@@ -6,15 +6,17 @@ class FirstFormsController < ApplicationController
   end
 
   def create
+    @reading = Reading.find(params[:reading_id])
     @first_form = FirstForm.new(first_form_params)
+    @first_form.reading = @reading
     if @first_form.save
-      redirect_to root_path
+      redirect_to reading_first_form_clinical_anomalies_path(@reading, @first_form)
     else
       render session["method"]
     end
   end
 
-  def patient_params
+  def first_form_params
     params.require(:first_form).permit(
     :mammography_type,
     :mammography_system,

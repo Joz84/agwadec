@@ -1,0 +1,2 @@
+module ClinicalAnomaliesHelper
+end

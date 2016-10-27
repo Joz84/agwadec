@@ -1,10 +1,23 @@
 
- <%= simple_form_for @practitioner, url: patient_practitioners_path(@patient) do |f| %>
-    <li><%= f.input :name %></li>
-    <li><%= f.input :speciality, input_html: { value: "gynecologist" }, as: :hidden %></li>
-    <li><%= f.input :address %></li>
-    <li><%= f.input :city %></li>
-    <li><%= f.input :zip_code %></li>
-    <li><%= f.button :submit %></li>
-  <% end %>
 
+<div class="wrapper">
+  <div class="container">
+      <div class="row">
+        <h1>Gynécologue</h1>
+      </div>
+      <%= simple_form_for @practitioner, url: patient_practitioners_path(@patient) do |f| %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4"><%= f.input :name, label: "Nom de famille" %></div>
+        <div><%= f.input :speciality, input_html: { value: "gynecologist" }, as: :hidden %></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4"><%= f.input :address, label: "Adresse" %></div>
+        <div class="col-xs-12 col-sm-4"><%= f.input :city, label: "Commune" %></div>
+        <div class="col-xs-12 col-sm-4"><%= f.input :zip_code, label: "Code postal" %></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-sm-offset-5"><%= f.button :submit, "Continuer", class: "btn btn-primary btn-lg" %></div>
+      </div>
+      <% end %>
+  </div>
+</div>

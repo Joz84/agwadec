@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+clinical_symptoms = [
+  "Mammectomie",
+  "Cicatrice",
+  "Naevus ou autre formation cutanée",
+  "Ulcération",
+  "Rétractation du mamelon",
+  "Rétractation cutanée ou méplat",
+  "Inflammation",
+  "Lésion eczématiforme du mamelon",
+  "Écoulement anormal",
+  "Tuméfaction",
+  "Adénopathie(s)"
+  ]
+
+clinical_symptoms.each do |s|
+  ClinicalSymptom.create(name: s)
+end

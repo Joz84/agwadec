@@ -6,4 +6,9 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def dashboard
+    @patients = Patient.all
+  end
+
 end
