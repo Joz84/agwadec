@@ -1,11 +1,27 @@
-<div class="wrapper-grey">
+<div class="wrapper">
   <div class="container">
     <div class="row">
+      <h1>Liste des patients</h1>
+      <hr>
+    </div>
+    <div class="row">
       <% @patients.each do |patient| %>
-          <div class="col-xs-10 col-sm-3">
-            <div><%= patient.first_name %></div>
+          <div class="col-xs-10 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://phen375-france.fr/wp-content/uploads/2016/09/cancer-du-sein-phen375-france.jpg');">
+              <div class="card-category"><% "#{patient.sheet.count} consultations" %></div>
+              <div class="card-description">
+                <h2><%= "#{patient.first_name} #{patient.last_name}" %></h2>
+                <% if patient.sheet && patient.sheet.last %>
+                  <p><%= "Date de la dernière consultation : #{patient.sheet.last.created_at}" %></p>
+                <% end %>
+              </div>
+              <%= image_tag "profil.png", class: "card-user avatar" %>
+            </div>
           </div>
       <% end %>
     </div>
   </div>
 </div>
+
+
+

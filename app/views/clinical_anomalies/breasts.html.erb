@@ -1,47 +1,62 @@
-<h1>Test</h1>
-<div class="background-relative" style="background-image: url('http://res.cloudinary.com/dpilgpat0/image/upload/v1477558070/breasts_yzlqi1.png');">
-  <div class="background-relative">
-    <div class="right">
-      <div class="circle">
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Droit NW" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-0" %>
-        <% end %>
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Droit NE" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-90" %>
-        <% end %>
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Droit SE" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-180" %>
-        <% end %>
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Droit SW" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-270" %>
-        <% end %>
+
+<div>
+  <div class="container">
+    <div class="row">
+      <h2>Examen Clinique</h2>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="background-relative" style="background-image: url('http://res.cloudinary.com/dpilgpat0/image/upload/v1477558070/breasts_yzlqi1.png');">
+          <div class="background-relative">
+            <div class="right">
+              <div class="circle">
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Droit NW" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-0" %>
+                <% end %>
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Droit NE" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-90" %>
+                <% end %>
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Droit SE" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-180" %>
+                <% end %>
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Droit SW" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-270" %>
+                <% end %>
+              </div>
+            </div>
+            <div class="left">
+              <div class="circle">
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Gauche NW" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-0" %>
+                <% end %>
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Gauche NE" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-90" %>
+                <% end %>
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Gauche SE" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-180" %>
+                <% end %>
+                <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
+                  <%= f.input :selected, input_html: { value: "Gauche SW" }, as: :hidden %>
+                  <%= f.button :submit, "", class: "btn-quart btn-rotate-270" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="left">
-      <div class="circle">
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Gauche NW" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-0" %>
-        <% end %>
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Gauche NE" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-90" %>
-        <% end %>
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Gauche SE" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-180" %>
-        <% end %>
-        <%= simple_form_for :position, url: position_path(@reading, @first_form, @anomaly), method: :post do |f| %>
-          <%= f.input :selected, input_html: { value: "Gauche SW" }, as: :hidden %>
-          <%= f.button :submit, "", class: "btn-quart btn-rotate-270" %>
-        <% end %>
-      </div>
+    <div class="row">
+      <hr>
+      <div class="justify-center">Sélectionner la zone concernée</div>
     </div>
   </div>
 </div>
-
 

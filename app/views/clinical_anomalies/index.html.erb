@@ -1,22 +1,23 @@
 
-<div class="wrapper-grey">
+<div>
   <div class="container">
+    <div class="row">
+      <h2>Examen Clinique</h2>
+    </div>
+    <hr>
     <div class="row">
       <% @symptoms.each do |symptom, position| %>
         <% if position %>
-          <div class="col-xs-10 col-sm-4">
-            <div><%= symptom %></div>
-          </div>
-          <div class="col-xs-2 col-sm-2">
-            <div><%= position %></div>
-          </div>
+          <div class="col-xs-10 col-sm-4"><%= symptom %><hr></div>
+          <div class="col-xs-2 col-sm-2"><%= position %><hr></div>
         <% else %>
           <div class="col-xs-12 col-sm-6">
             <div>
               <%= simple_form_for :symptom, url: breasts_path(@reading, @first_form), method: :post do |f| %>
                 <%= f.input :selected, input_html: { value: symptom }, as: :hidden %>
-                <%= f.button :submit, symptom %>
+                <%= f.button :submit, symptom, class: "btn"  %>
               <% end %>
+              <hr>
             </div>
           </div>
         <% end %>
