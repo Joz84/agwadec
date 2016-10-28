@@ -6,7 +6,7 @@
     </div>
     <div class="row">
       <% @patients.each do |patient| %>
-          <div class="col-xs-10 col-sm-4">
+          <div class="col-sm-4">
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://phen375-france.fr/wp-content/uploads/2016/09/cancer-du-sein-phen375-france.jpg');">
               <div class="card-category"><% "#{patient.sheet.count} consultations" %></div>
               <div class="card-description">
