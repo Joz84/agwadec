@@ -1,12 +1,12 @@
 class FirstFormsController < ApplicationController
+  before_action :find_reading, only: [ :history, :create ]
+
   def history
-    @reading = Reading.find(params[:reading_id])
     @first_form = FirstForm.new
     session["method"] = :history
   end
 
   def create
-    @reading = Reading.find(params[:reading_id])
     @first_form = FirstForm.new(first_form_params)
     @first_form.reading = @reading
     if @first_form.save
@@ -14,6 +14,12 @@ class FirstFormsController < ApplicationController
     else
       render session["method"]
     end
+  end
+
+  private
+
+  def find_reading
+    @reading = Reading.find(params[:reading_id])
   end
 
   def first_form_params

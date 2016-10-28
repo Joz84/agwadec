@@ -6,24 +6,24 @@
       </div>
       <%= simple_form_for @first_form, url: reading_first_forms_path(@reading) do |f| %>
       <div class="row">
-        <div class="col-xs-12 col-sm-6"><%= f.input :mammography_type %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :mammography_system %></div>
+        <div class="col-sm-6"><%= f.input :mammography_type, label: "Type de mammographie", collection: [ "Mammographe analogique", "Mammographe numérique DR plein champ ou balayage", "Mammographe numérique Système Numérique CR" ] %></div>
+        <div class="col-sm-6"><%= f.input :mammography_system, label: "Marque et système" %></div>
       </div>
       <hr>
       <div class="row">
         <h2>Antécédents</h2>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-sm-6"><%= f.input :past_mammography %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :past_operation %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :past_mammography_date %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :past_operation_date %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :past_operation_reason %></div>
+        <div class="col-sm-6"><%= f.input :past_mammography, label: "Avez-vous déjà passé une mammographie ?" %></div>
+        <div class="col-sm-6"><%= f.input :past_operation, label: "Avez-vous déjà été opérée ?" %></div>
+        <div class="col-sm-6"><%= f.input :past_mammography_date, label: "À quelle date ?" %></div>
+        <div class="col-sm-6"><%= f.input :past_operation_date, label: "À quelle date ?" %></div>
+        <div class="col-sm-6"><%= f.input :past_operation_reason, label: "Pour quel motif ?" %></div>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-sm-6"><%= f.input :family_history %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :family_member %></div>
-        <div class="col-xs-12 col-sm-6"><%= f.input :hormonal_treatment %></div>
+        <div class="col-sm-6"><%= f.input :family_history, label: "Antécédants familiaux" %></div>
+        <div class="col-sm-6"><%= f.input :family_member, label: "Membre de la famille" %></div>
+        <div class="col-sm-6"><%= f.input :hormonal_treatment, label: "Traitement hormonal" %></div>
         <div class="col-sm-2 col-sm-offset-4"><%= f.button :submit, "Continuer", class: "btn btn-primary btn-lg" %></div>
       </div>
       <% end %>

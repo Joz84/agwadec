@@ -1,20 +1,17 @@
 class ClinicalAnomaliesController < ApplicationController
+  before_action :find_reading_first_form, only: [ :index, :breasts ]
+
   def index
-    @reading = Reading.find(params[:reading_id])
-    @first_form = FirstForm.find(params[:first_form_id])
     symptoms = ClinicalSymptom.all
     @symptoms = Hash.new
     symptoms.each do |s|
-      a = ClinicalAnomaly.find_by(clinical_symptom: s)
+      a = ClinicalAnomaly.find_by(clinical_symptom: s, first_form: @first_form )
       @symptoms[s.name] = a ? a.position : nil
     end
   end
 
   def breasts
-    name = breasts_params[:selected]
-    @symptom = ClinicalSymptom.find_by(name: name )
-    @reading = Reading.find(params[:reading_id])
-    @first_form = FirstForm.find(params[:first_form_id])
+    @symptom = ClinicalSymptom.find_by(name: breasts_params[:selected] )
     @anomaly = ClinicalAnomaly.create(clinical_symptom: @symptom, first_form: @first_form )
   end
 
@@ -28,11 +25,20 @@ class ClinicalAnomaliesController < ApplicationController
   def delete
   end
 
+  private
+
+  def find_reading_first_form
+    @reading = Reading.find(params[:reading_id])
+    @first_form = FirstForm.find(params[:first_form_id])
+  end
+
   def breasts_params
+    # a paramétré
     params.require(:symptom).permit!
   end
 
   def position_params
+    # a paramétré
     params.require(:position).permit!
   end
 
